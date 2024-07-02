@@ -1,0 +1,15 @@
+.lang{
+    margin: 10px auto;
+    width: 400px;
+    display: flex;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.radiob{
+    margin: 5px;
+}
+
+.radiol{
+    margin: 5px;
+}

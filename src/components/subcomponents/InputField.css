@@ -1,0 +1,12 @@
+.inputs{
+    margin: 2px 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.error{
+    font-size: 13px;
+    color: red;
+    margin-left:10px;
+    padding-left: 30px;
+}

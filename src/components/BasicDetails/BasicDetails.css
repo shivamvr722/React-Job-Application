@@ -1,0 +1,15 @@
+.inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fields{
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.radios{
+    display: flex;
+}
