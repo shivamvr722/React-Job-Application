@@ -24,6 +24,7 @@ function App() {
       alert(
         `Dear ${values.firstName}, Your form has been submitted successfully!`
       );
+      console.log(values, "data");
     } else {
       setFormStep((step) => step + 1);
       actions.setTouched({});
@@ -32,6 +33,7 @@ function App() {
   }
 
   const initialValue = {
+    // basic
     firstname: "",
     lastname: "",
     designation: "",
@@ -44,17 +46,51 @@ function App() {
     zipcode: "",
     name: "",
     relation: "",
+    gender: "",
+
+    // education
     education: [{boarduni: "", course: "", passyear: "", percentage: ""}],
+
+    // experience
     experience: [{company: "", designation: "", fromdate: "", todate: ""}],
+
+    //tech
+    tjava: "",
+    tpython: "",
+    tjs: "",
+    java: "",
+    python: "",
+    js: "",
+
+    //lang
+    hindi:"",
+    hread:"",
+    hwrite:"",
+    hspeak:"",
+
+    english:"",
+    eread:"",
+    ewrite:"",
+    espeak:"",
+
+    gujarati:"",
+    gread:"",
+    gwrite:"",
+    gspeak:"",
+
+
+    //relation
     rname: "",
     rcontact: "",
     rrelation: "",
+
+    // pref
     noticeperiod: "",
     expectecctc: "",
     actualctc: "",
   }
   
-  function _renderStepContent(step) {
+  function renderStepContent(step) {
     switch (step) {
       case 0:
         return (
@@ -92,7 +128,7 @@ function App() {
     >
       {({ isSubmitting, handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          {_renderStepContent(formStep)}
+          {renderStepContent(formStep)}
           <div className="App">
             {formStep !== 0 ? (
               <div>

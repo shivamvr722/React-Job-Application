@@ -5,15 +5,15 @@ export default function technologyFieldFeeds(){
 const fieldCheckData = [
   {
     "title": "Java",
-    "name": "java"
+    "name": "tjava" 
   }, 
   {
     "title": "Python",
-    "name": "python"
+    "name": "tpython"
   }, 
   {
     "title": "Java Script",
-    "name": "js"
+    "name": "tjs"
   }, 
 ]
 

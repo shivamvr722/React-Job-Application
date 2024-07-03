@@ -5,7 +5,7 @@ import Heading from "../headings/Headings";
 function Department(){
   return(
     <div>
-      <label htmlFor="department">Relationship: </label>
+      <label htmlFor="department">Department: </label>
       <select name="department" id="department">
         <option value="account">Account</option>
         <option value="development">Development</option>
@@ -20,7 +20,7 @@ function Department(){
 function PreferenceLocation(){
   return(
     <div>
-      <label htmlFor="plocation">Relationship: </label>
+      <label htmlFor="plocation">Prefered location: </label>
       <select name="plocation" id="plocation">
         <option value="ahmedabad">Ahmedabad</option>
         <option value="baroda">Baroda</option>

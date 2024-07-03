@@ -1,5 +1,5 @@
 import "./BasicDetails.css"
-import TextInput from "../subcomponents/InputField";
+import InputField from "../subcomponents/InputField";
 import basicDetailsFieldFeed from "./basicDetailFieldFeed";
 import RadioField from "../subcomponents/RadioField";
 import Heading from "../headings/Headings";
@@ -17,35 +17,36 @@ function Relationship(){
   )
 }
 
+const radioData = [
+  {
+    "title": "Male",
+    "value": "male",
+    "name": "gender",
+  },
+  {
+    "title": "Female",
+    "value": "female",
+    "name": "gender",
+  },
+  {
+    "title": "Other",
+    "value": "other",
+    "name": "gender",
+  },
+]
 
 export default function BasicDetails(){
   const basicInfoCollectionText = basicDetailsFieldFeed();
 
   const mappedCollection = basicInfoCollectionText.map((basic, i)=>{
-    return <TextInput basic = {basic} key={basic.title  + 1}/>;
+    return <InputField basic={basic} key={basic.title  + 1}/>;
   })
-
-  const radioData = [
-    {
-      "title": "Male",
-      "value": "male",
-      "name": "gender",
-    },
-    {
-      "title": "Female",
-      "value": "female",
-      "name": "gender",
-    },
-    {
-      "title": "Other",
-      "value": "other",
-      "name": "gender",
-    },
-  ]
 
   const mappedRadioCollection = radioData.map((obj, i)=>{
-    return <RadioField data={obj} key={obj.title} />
+    return <RadioField data={obj} key={obj.title + i} />
   })
+  
+
 
   return(
     <div className="fields">

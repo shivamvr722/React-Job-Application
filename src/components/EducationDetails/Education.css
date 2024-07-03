@@ -11,7 +11,8 @@
     display: flex;
     margin: 0 auto;
     background-color: aliceblue;
-    width: 1350px;  
+    width: 1350px;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -22,8 +23,8 @@
 .btnar{
     background-color: blue;
     color: white;
-    font-size: 20px;
-    border: none;
+    font-size: 14px;
     border-radius: 7px;
+    border: none;
     padding: 5px 20px;
 }

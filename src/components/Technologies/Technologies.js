@@ -4,6 +4,8 @@ import technologyFieldFeeds from "./TechnologiesFieldFeed";
 import technologyFieldRadios from "./technologyStatusFields";
 import Heading from "../headings/Headings";
 import "./Technologies.css"
+import { ErrorMessage } from "formik";
+
 
 export default function Technology(){
   const techCheckFeeds = technologyFieldFeeds();
@@ -14,6 +16,7 @@ export default function Technology(){
   const mappedRadioCheckCollection = techRadioFeeds.map((obj, i)=>{
     return <RadioField data={obj} key={obj.title + Math.floor(Math.random() * 100)} />
   });
+
   return(
     <div>
       <Heading heading={"Technology Known"} />
@@ -22,18 +25,21 @@ export default function Technology(){
         {mappedRadioCheckCollection[0]}
         {mappedRadioCheckCollection[1]}
         {mappedRadioCheckCollection[2]}
+        <ErrorMessage name={mappedTechCheckCollection[0]}/>
       </div>
       <div className="lang">
         {mappedTechCheckCollection[1]}
         {mappedRadioCheckCollection[3]}
         {mappedRadioCheckCollection[4]}
         {mappedRadioCheckCollection[5]}
+        <ErrorMessage name={mappedTechCheckCollection[1]}/>
       </div>
       <div className="lang">
         {mappedTechCheckCollection[2]}
         {mappedRadioCheckCollection[6]}
         {mappedRadioCheckCollection[7]}
         {mappedRadioCheckCollection[8]}
+        <ErrorMessage name={mappedTechCheckCollection[2]}/>
       </div>
     </div>
   )
