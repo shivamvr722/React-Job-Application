@@ -36,8 +36,10 @@ export default function Preference(){
   return(
     <div className="preferenceDiv">
       <Heading heading={"Preference Details"} />
-      <Department />
-      <PreferenceLocation />
+      <div className="deploc">
+        <Department />
+        <PreferenceLocation />
+      </div>
       <PreferenceField />
     </div>
   )

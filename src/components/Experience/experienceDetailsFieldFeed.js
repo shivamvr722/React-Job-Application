@@ -17,7 +17,7 @@ const fieldData = [
   },
   {
     "title": "From",
-    "type": "date",
+    "type": "date", 
     "name": "fromdate",
   },
   {

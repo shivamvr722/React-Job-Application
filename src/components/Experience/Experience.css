@@ -6,3 +6,10 @@
     background-color: aliceblue;
 }
 
+.expdiv{
+    margin: 10px auto;
+    width: 1500px;
+    background-color:#99c2e6;
+    padding: 10px;
+    border-radius: 9px;
+}

@@ -1,7 +1,8 @@
 .tech{
     margin: 10px auto;
-    width: 380px;
+    width: 400px;
     display: flex;
+    border-radius: 9px;
     background-color: aliceblue;
     padding: 20px;
 }
@@ -15,7 +16,8 @@
 }
 .techno{
     margin: 10px auto;
+    padding: 10px;
     width: 450px;
-    border: 2px solid red;
+    border-radius: 9px;
     background-color: #99c2e6;
 }

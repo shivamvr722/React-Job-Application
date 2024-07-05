@@ -42,8 +42,6 @@ function App() {
     phone: "",
     dob: "",
     city: "",
-    state: "",
-    sstate: "",
     address: "",
     address2: "",
     zipcode: "",

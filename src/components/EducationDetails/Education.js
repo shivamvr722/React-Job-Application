@@ -9,6 +9,7 @@ export default function Education(props){
   const {values} = useFormikContext();
   return(
   <>
+  <div className="edudetails">
   <Heading heading={"Education Details"} />
   <FieldArray name="education">
     {({ remove, push }) => (
@@ -31,6 +32,7 @@ export default function Education(props){
       </div>
     )}
     </FieldArray>
+    </div>
     </>
   )
 }

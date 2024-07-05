@@ -19,8 +19,9 @@ export default function Technology(){
 
   return(
     <div>
+    <div className="techno">
       <Heading heading={"Technology Known"} />
-      <div >
+      <div>
         <div className="tech">
           {mappedTechCheckCollection[0]}
           {mappedRadioCheckCollection[0]}
@@ -59,9 +60,7 @@ export default function Technology(){
           </center>
         </div>
       </div>
-      <div>
-      </div>
-      
+    </div>
     </div>
   )
 }

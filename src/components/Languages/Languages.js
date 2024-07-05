@@ -12,8 +12,8 @@ export default function Language(){
 
   return(
     <div>
-      <Heading heading={"Language Details"} />
       <div className="languages">
+        <Heading heading={"Language Details"} />
         <div className="lang">
           {mappedCheckCollection[0]}
           {mappedCheckCollection[1]}

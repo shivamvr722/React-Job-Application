@@ -2,6 +2,16 @@
     margin: 10px auto;
     display: flex;
     padding: 20px;
-    width: 900px;
+    width: 1090px;
+    align-items: center;
+    border-radius: 9px;
     background-color: aliceblue;
+}
+
+.reference{
+    background-color: #99c2e6;
+    width: 1190px;
+    padding: 10px;
+    border-radius: 9px;
+    margin: 10px auto;
 }
