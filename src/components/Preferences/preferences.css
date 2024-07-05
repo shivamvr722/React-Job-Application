@@ -1,6 +1,7 @@
 .preferenceFields{
     margin: 10px auto;
-    width: 960px;
+    width: 1160px;
+    align-items: center;
     border-radius: 9px;
     display: flex;
     padding: 20px;

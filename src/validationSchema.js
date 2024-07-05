@@ -1,6 +1,5 @@
 import * as Yup from "yup";
-import Language from "./components/Languages/Languages";
-const phoneRgx = /^(\+[0-9]{1,})*([0-9]{10})$/;
+// const phoneRgx = /^(\+[0-9]{1,})*([0-9]{10})$/;
 
 export const validationSchema = [
   Yup.object().shape({
@@ -98,9 +97,12 @@ export const validationSchema = [
         .min(1, "Desingnation should not be less then 1 character"),
 
         fromdate: Yup.date()
+        // .required("please select the date for the from date")
         .max(new Date(), "cannot be greter then today"),
 
-        todate: Yup.date().min((Yup.ref("fromdate")),
+        todate: Yup.date().min((Yup.ref("fromdate"))
+        // .required("please select the date for the to date")
+        ,
         ({ min }) => "The value must be > from date").max(new Date(), "date caanot be greater then today")
       })
     )
@@ -123,7 +125,7 @@ export const validationSchema = [
       gwrite: Yup.boolean(),
     }).test(
       "language",
-      "aetleast one from read, write or speak should be selected",
+      "if you selected any language then you must select one from read, write or speak or vise versa",
       (value) => {
         console.log(value);
         if(value.english && (!value.eread && !value.espeak && !value.ewrite)){
@@ -145,23 +147,19 @@ export const validationSchema = [
   ),
 
   Yup.object().shape({
-    js: Yup.string(),
-    python: Yup.string(),
-    java: Yup.string(),
-
     tjava: Yup.boolean('Select this checkbox please'),
     java: Yup.string().when("tjava", {
-      is: (tjava) =>  tjava == true,
+      is: (tjava) =>  tjava === true,
       then:(java)=> java.required('Required to Select Status!')
     }),
     tpython: Yup.boolean('Select this checkbox please'),
     python: Yup.string().when("tpython", {
-      is: (tpython) => tpython == true,
+      is: (tpython) => tpython === true,
       then:(python)=> python.required('Required to Select Status!')
     }),
     tjs: Yup.boolean('Select this checkbox please'),
     js: Yup.string().when("tjs", {
-      is: (tjs) => tjs == true,
+      is: (tjs) => tjs === true,
       then:(js)=> js.required('Required to Select Status!')
     })
   }),
@@ -170,17 +168,30 @@ export const validationSchema = [
     rname: Yup.string()
     .required("name is required"),
     rcontact: Yup.string()
-    .required("contanct is required"),
+    .required("contanct is required")
+    .max(20, "phone field should be less then 20 characteres")
+    .min(5, "Phone Number field should be more than 5 characters"),
+
     rrelation: Yup.string()
-    .required("relation is required")
+    .required("relation is required"),
+
+    rcontact2: Yup.string()
+    .max(20, "phone field should be less then 20 characteres")
+    .min(5, "Phone Number field should be more than 5 characters"),
   }),
 
   Yup.object().shape({
     noticeperiod: Yup.string()
     .required("notice period is required"),
+
     expectecctc: Yup.string()
-    .required("expected ctc is required"),
+    .required("expected ctc is required")
+    .max(7, "max allowed is 7 digit for salary")
+    .min(4, "min allowed digit is 4"),
+
     actualctc: Yup.string()
-    .required("actual ctc is required"),
+    .required("actual ctc is required")
+    .max(7, "max allowed is 7 digit for salary")
+    .min(4, "min allowed digit is 4"),
   }),
 ]

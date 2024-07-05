@@ -6,8 +6,8 @@ import Language from './components/Languages/Languages';
 import Technology from './components/Technologies/Technologies';
 import Reference from './components/References/Reference';
 import Preference from './components/Preferences/Preference';
-import { useState, createContext, useContext } from "react";
-import { Form, Formik, ErrorMessage } from 'formik';
+import { useState } from "react";
+import { Formik } from 'formik';
 import { validationSchema } from './validationSchema';
 
 
@@ -42,6 +42,7 @@ function App() {
     phone: "",
     dob: "",
     city: "",
+    state: "",
     address: "",
     address2: "",
     zipcode: "",

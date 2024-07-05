@@ -9,7 +9,6 @@ export default function Language(){
   const mappedCheckCollection = lanFieldFeeds.map((obj, i)=>{
     return <CheckboxField data={obj} key={obj.title + Math.floor(Math.random() * 100)} />
   });
-
   return(
     <div>
       <div className="languages">
