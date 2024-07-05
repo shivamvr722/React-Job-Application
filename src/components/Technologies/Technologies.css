@@ -1,9 +1,9 @@
-.lang{
+.tech{
     margin: 10px auto;
-    width: 400px;
+    width: 380px;
     display: flex;
-    padding: 20px;
     background-color: aliceblue;
+    padding: 20px;
 }
 
 .radiob{
@@ -12,4 +12,10 @@
 
 .radiol{
     margin: 5px;
+}
+.techno{
+    margin: 10px auto;
+    width: 450px;
+    border: 2px solid red;
+    background-color: #99c2e6;
 }

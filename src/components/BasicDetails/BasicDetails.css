@@ -5,11 +5,32 @@
 
 .fields{
     margin: 10px auto;
-    width: 400px;
+    width: 450px;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: #99c2e6;
+    border-radius: 9px;
 }
 
 .radios{
     display: flex;
+}
+
+.citystates{
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.states{
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+.relation{
+    margin: 10px;
+    padding: 10px;
+}
+
+.cities{
+    margin: 10px;
+    justify-content: space-evenly;
 }

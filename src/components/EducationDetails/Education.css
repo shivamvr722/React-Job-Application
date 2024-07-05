@@ -4,14 +4,15 @@
     width: 1300px;
     display: flex;
     padding: 20px;
-    background-color: aliceblue;
+    
 }
 
 .row{
     display: flex;
     margin: 0 auto;
-    background-color: aliceblue;
-    width: 1350px;
+    background-color: #99c2e6;
+    border-radius: 7px;
+    width: 1450px;
     justify-content: space-between;
     padding: 20px;
 }
@@ -21,10 +22,11 @@
 }
 
 .btnar{
-    background-color: blue;
+    background-color:#0088ff;
     color: white;
     font-size: 14px;
     border-radius: 7px;
+    margin: 20px;
     border: none;
     padding: 5px 20px;
 }

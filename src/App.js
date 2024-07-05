@@ -7,7 +7,7 @@ import Technology from './components/Technologies/Technologies';
 import Reference from './components/References/Reference';
 import Preference from './components/Preferences/Preference';
 import { useState, createContext, useContext } from "react";
-import { Form, Formik } from 'formik';
+import { Form, Formik, ErrorMessage } from 'formik';
 import { validationSchema } from './validationSchema';
 
 
@@ -26,6 +26,7 @@ function App() {
       );
       console.log(values, "data");
     } else {
+      console.log(values, "data");
       setFormStep((step) => step + 1);
       actions.setTouched({});
       actions.setSubmitting(false);
@@ -41,6 +42,8 @@ function App() {
     phone: "",
     dob: "",
     city: "",
+    state: "",
+    sstate: "",
     address: "",
     address2: "",
     zipcode: "",
@@ -63,20 +66,28 @@ function App() {
     js: "",
 
     //lang
-    hindi:"",
-    hread:"",
-    hwrite:"",
-    hspeak:"",
+    
+    
+    language :{
+      hindi: false,
+      english: false,
+      gujarati: false,
+      
+      hread:false,
+      hwrite:false,
+      hspeak:false,
+      
+      
+      eread:false,
+      ewrite:false,
+      espeak:false,
 
-    english:"",
-    eread:"",
-    ewrite:"",
-    espeak:"",
-
-    gujarati:"",
-    gread:"",
-    gwrite:"",
-    gspeak:"",
+      gread:false,
+      gwrite:false,
+      gspeak:false,
+    },
+    
+    
 
 
     //relation
@@ -125,9 +136,11 @@ function App() {
       onSubmit={handleSubmit}
       validateOnChange={false}
       validationSchema={currentValidationSchema}
+      enableReinitialize={true}
     >
-      {({ isSubmitting, handleSubmit }) => (
+      {({ isSubmitting, handleSubmit, errors }) => (
         <form onSubmit={handleSubmit}>
+          {console.log(errors)}
           {renderStepContent(formStep)}
           <div className="App">
             {formStep !== 0 ? (

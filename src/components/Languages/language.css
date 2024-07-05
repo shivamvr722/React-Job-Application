@@ -1,11 +1,11 @@
 .lang{
     margin: 10px auto;
-    width: 350px;
+    width: 370px;
+    border-radius: 7px;
+    background-color: aliceblue;
     display: flex;
     padding: 20px;
-    background-color: aliceblue;
 }
-
 
 .checkb{
     margin: 5px;
@@ -13,4 +13,17 @@
 
 .checkl{
     margin: 5px;
+}
+
+.errordiv{
+    font-size: 13px;
+    color: red;
+  }
+
+.languages {
+    background-color: #99c2e6;
+    border-radius: 9px;
+    margin: 10px auto;
+    padding: 20px;
+    width: 400px;
 }

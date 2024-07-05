@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import Language from "./components/Languages/Languages";
 const phoneRgx = /^(\+[0-9]{1,})*([0-9]{10})$/;
 
 export const validationSchema = [
@@ -50,7 +51,7 @@ export const validationSchema = [
     .min(5, "zipcode field should be more than 5 characters"),
 
     gender: Yup.string()
-    .required("required")
+    .required("gender is required")
   }),
 
   Yup.object().shape({
@@ -107,28 +108,41 @@ export const validationSchema = [
   }),
 
   Yup.object().shape({
-    // hindi: Yup.string(),
-    // english: Yup.string(),
-    // gujarati: Yup.string(),
-    
-    // hindi: Yup.boolean('Select this checkbox please'),
-    // hread: Yup.boolean.when("hread", {
-    //   is: (hread) =>  hread == true,
-    //   then:(hindi)=> hindi.required('Required to Select Status!')
-    // }),
-
-    // english: Yup.boolean('Select this checkbox please'),
-    // python: Yup.string().when("tpython", {
-    //   is: (tpython) => tpython == true,
-    //   then:(python)=> python.required('Required to Select Status!')
-    // }),
-
-    // gujarati: Yup.boolean('Select this checkbox please'),
-    // js: Yup.string().when("tjs", {
-    //   is: (tjs) => tjs == true,
-    //   then:(js)=> js.required('Required to Select Status!')
-    // })
-  }),
+    language: Yup.object().shape({
+      hindi: Yup.boolean(),
+      gujarati: Yup.boolean(),
+      english: Yup.boolean(),
+      eread: Yup.boolean(),
+      espeak: Yup.boolean(),
+      ewrite: Yup.boolean(),
+      hread: Yup.boolean(),
+      hspeak: Yup.boolean(),
+      hwrite: Yup.boolean(),
+      gread: Yup.boolean(),
+      gspeak: Yup.boolean(),
+      gwrite: Yup.boolean(),
+    }).test(
+      "language",
+      "aetleast one from read, write or speak should be selected",
+      (value) => {
+        console.log(value);
+        if(value.english && (!value.eread && !value.espeak && !value.ewrite)){
+          return false;
+        } else if(value.gujarati && (!value.gread && !value.gspeak && !value.gwrite)){
+          return false;
+        } else if(value.hindi && (!value.hread && !value.hspeak && !value.hwrite)){
+          return false;
+        } else if(!value.english && (value.eread || value.espeak || value.ewrite)){
+          return false;
+        } else if(!value.gujarati && (value.gread || value.gspeak || value.gwrite)){
+          return false;
+        } else if(!value.hindi && (value.hread || value.hspeak || value.hwrite)){
+          return false;
+        }
+        return true
+      }
+    )}
+  ),
 
   Yup.object().shape({
     js: Yup.string(),

@@ -42,12 +42,12 @@ const basicInfoCollectionText = [
   "name": "dob",
   "type": "date",
 },
-{
-  "title": "City",
-  "hint": "city",
-  "name": "city",
-  "type": "text",
-},
+// {
+//   "title": "City",
+//   "hint": "city",
+//   "name": "city",
+//   "type": "text",
+// },
 {
   "title": "Address",
   "hint": "address",

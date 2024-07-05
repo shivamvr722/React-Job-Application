@@ -5,50 +5,50 @@ export default function languageFieldFeeds(){
 const fieldData = [
   {
     "title": "Hindi",
-    "name": "hindi"
+    "name": "language.hindi"
   }, 
   {
     "title": "Read",
-    "name": "hread"
+    "name": "language.hread"
   }, 
   {
     "title": "Write",
-    "name": "hwrite"
+    "name": "language.hwrite"
   }, 
   {
     "title": "Speak",
-    "name": "hspeak"
+    "name": "language.hspeak"
   }, 
   {
     "title": "English",
-    "name": "english"
+    "name": "language.english"
   },
   {
     "title": "Read",
-    "name": "eread"
+    "name": "language.eread"
   }, 
   {
     "title": "Write",
-    "name": "ewrite"
+    "name": "language.ewrite"
   }, 
   {
     "title": "Speak",
-    "name": "espeak"
+    "name": "language.espeak"
   }, 
   {
     "title": "Gujarati",
-    "name": "gujarati"
+    "name": "language.gujarati"
   },
   {
     "title": "Read",
-    "name": "gread"
+    "name": "language.gread"
   }, 
   {
     "title": "Write",
-    "name": "gwrite"
+    "name": "language.gwrite"
   }, 
   {
     "title": "Speak",
-    "name": "gspeak"
+    "name": "language.gspeak"
   }, 
 ]

@@ -8,7 +8,6 @@ export default function RadioField(props){
       <Field type="radio" className="radiob" {...props.data} {...Field}/>
       <label className="radiol" htmlFor={props.data.title}>{props.data.title}</label>
     </div>
-    <ErrorMessage {...props.data}/>
     </>
   )
 }

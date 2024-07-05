@@ -3,12 +3,13 @@
     width: 800px;
     display: flex;
     padding: 20px;
+    justify-content: space-between;
     background-color: aliceblue;
 }
 
 .preferenceDiv{
     background-color: aliceblue;
-    width: 830px;
+    width: 1030px;
     margin: 0 auto;
     padding: 20px;
 }

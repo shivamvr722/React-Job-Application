@@ -18,9 +18,7 @@ export default function Experience(){
               <TextFiledInputDy name={`experience.${index}.designation`} title={"Designation"} id="designation" className="column"/>
               <TextFiledInputDy name={`experience.${index}.fromdate`} title={"From Date"} id="fromdate" className="column"/>
               <TextFiledInputDy name={`experience.${index}.todate`} title={"To Date"} id="uniboard" className="column"/>
-              <div className="buttonx">
-                <button type="button" className="btnar" onClick={() => remove(index)}> Del </button>
-              </div>
+              <button type="button" className="btnar" onClick={() => remove(index)}> Del </button>
             </div>
           ))}
         <center>
